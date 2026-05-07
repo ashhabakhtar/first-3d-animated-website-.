@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: var(--font-outfit);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --theme-color: #FFB74D;
+  --product-gradient: linear-gradient(135deg, #FFB74D 0%, #FFA726 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--product-gradient);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+  transition: background 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::selection {
+  background-color: #f97316; /* orange-500 */
+  color: white;
+}
+
+/* Hide scrollbars for a cleaner look */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-500;
+}
+
+.glow-hover {
+  @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(251,146,60,0.5)] hover:scale-105;
+}
