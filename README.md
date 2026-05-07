@@ -1,6 +1,6 @@
 # 🥤 Raw Mango — The Future of Refreshment
 
-![Raw Mango Hero Banner](public/readme-hero.png)
+![Raw Mango Hero Banner](public/readme-hero.jpg)
 
 ## ✨ Overview
 
